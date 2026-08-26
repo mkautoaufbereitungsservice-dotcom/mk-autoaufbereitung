@@ -1,120 +1,480 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wetter-Dashboard | MK Autoaufbereitung</title>
-  <meta name="description" content="Wetter-Dashboard für Autoaufbereitung - Aktuelle Wetterdaten und Vorhersagen für Münsing">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MK Autoaufbereitung — Professionelle Fahrzeugpflege in Münsing</title>
+  <meta name="description" content="MK Autoaufbereitung bietet professionelle Fahrzeugpflege, Detailing und Service in Münsing. Hochwertige Produkte und sorgfältige Handarbeit.">
+  <style>
+:root{--bg-dark:#0b0b0d;--panel:#17171B;--gold:#D4AF37;--gold-hell:#F0D76C;--muted:#C8C8CC;--white:#ffffff;--radius:10px;--container-width:1200px;--focus:3px solid rgba(212,175,55,0.25);--card-gap:1.2rem;--shadow:0 6px 18px rgba(0,0,0,0.45)}*{box-sizing:border-box}html,body{height:100%}body{margin:0;font-family:"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:linear-gradient(180deg,var(--bg-dark) 0%,#111 100%);color:var(--muted);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;line-height:1.45}.visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap;border:0;padding:0;margin:-1px}.skip-link{position:fixed;left:1rem;top:1rem;background:var(--gold);color:#000;padding:.5rem .75rem;border-radius:6px;z-index:999;text-decoration:none;transform:translateY(-120%);transition:transform .18s ease}.skip-link:focus{transform:translateY(0);outline:none;box-shadow:var(--focus)}.container{width:100%;max-width:var(--container-width);margin:0 auto;padding:0 1.2rem}.site-header{position:relative;padding:2.2rem 0 1.2rem;border-bottom:2px solid var(--gold);overflow:hidden}.hero-inner{position:relative}.hero-media img{position:absolute;right:0;top:0;height:100%;width:100%;object-fit:cover;opacity:.18;pointer-events:none;filter:grayscale(.05);display:block}.header-content{position:relative;z-index:2;display:flex;gap:1rem;align-items:center;justify-content:space-between;padding:2rem 0}.brand .logo{font-weight:900;font-size:clamp(2.4rem,7vw,4.8rem);color:var(--gold);letter-spacing:.18em;text-shadow:0 0 12px rgba(212,175,55,.25)}.site-title{font-size:1.45rem;text-transform:uppercase;color:var(--white);margin:.15rem 0 .35rem}.tagline{font-style:italic;color:var(--gold-hell);margin:0}.header-contacts{display:flex;gap:.6rem}.btn.contact{background:rgba(255,255,255,0.04);color:var(--muted);border:1px solid rgba(212,175,55,0.1);padding:.5rem .75rem;border-radius:8px;text-decoration:none}.btn.contact:hover{background:rgba(212,175,55,0.06);color:var(--white)}.btn.contact:focus{outline:none;box-shadow:var(--focus)}h2{font-size:1.45rem;color:var(--gold);margin:2.2rem 0 1rem;padding-bottom:.35rem;border-bottom:1px solid rgba(212,175,55,.2);display:flex;align-items:center;gap:.6rem}h2::before{content:"✦";font-size:.9rem}h3{color:var(--white);margin:.2rem 0 .6rem;font-size:1rem}.kontakt-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--card-gap);margin-top:.8rem}.card{background:var(--panel);border:1px solid rgba(212,175,55,.18);border-radius:var(--radius);padding:1rem;box-shadow:var(--shadow);transition:transform .18s ease,box-shadow .18s}.card a{color:var(--muted);text-decoration:none}.card a:hover{color:var(--gold-hell)}.icon{color:var(--gold);margin-right:.35rem}.leistungen-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem;list-style:none;padding:0;margin:0}.service-card{background:var(--panel);padding:1rem;border-radius:8px;text-align:center;border:1px solid rgba(212,175,55,.08)}.service-icon{display:block;font-size:1.8rem;color:var(--gold);margin-bottom:.45rem}.table-wrap{overflow:auto;border-radius:10px;border:1px solid rgba(212,175,55,.18);margin-top:1rem}.price-table{width:100%;border-collapse:collapse;background:var(--panel);min-width:720px}.price-table th,.price-table td{padding:.85rem 1rem;border-bottom:1px solid rgba(212,175,55,.12);text-align:left;font-size:.95rem}.price-table th{background:rgba(212,175,55,.07);color:var(--gold-hell);text-transform:uppercase;font-size:.82rem;letter-spacing:.04em}.price-table tr:hover{background:rgba(212,175,55,.03)}.price-table td:last-child{color:var(--white);font-weight:500;white-space:nowrap}.packages{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:1rem}.package{background:var(--panel);border-radius:8px;padding:1rem;border:1px solid rgba(212,175,55,.12)}.pack-title{color:var(--gold-hell);margin:0 0 .35rem}.pack-desc{color:var(--muted);margin:0 0 .6rem}.pack-prices{display:grid;grid-template-columns:repeat(2,1fr);gap:.4rem}.pack-prices dt{font-weight:600;color:var(--white)}.pack-prices dd{margin:0;color:var(--muted)}.site-footer{border-top:2px solid var(--gold);margin-top:2.4rem;padding:1.4rem 0;background:rgba(0,0,0,.35);text-align:center}.footer-title{color:var(--gold);letter-spacing:.06em;margin:.4rem 0 .6rem}.footer-note{color:#9b9b9b;font-size:.92rem;max-width:900px;margin:0 auto}.form{margin-top:1rem;background:transparent}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.6rem}.form-grid label{display:block;color:var(--white);font-size:.94rem}.form-grid input,.form-grid textarea,.form-grid select{width:100%;padding:.6rem .7rem;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:rgba(0,0,0,0.35);color:var(--muted)}.form-grid textarea{resize:vertical}.consent{grid-column:1/ -1;display:flex;gap:.5rem;align-items:center}.form-actions{display:flex;gap:.8rem;align-items:center;margin-top:.6rem}.btn.primary{background:var(--gold);color:#000;padding:.6rem .9rem;border-radius:8px;border:none;cursor:pointer}.btn.primary:disabled{opacity:.6;cursor:not-allowed}.form-status{font-size:.95rem}.hint{font-size:.86rem;color:#9b9b9b}.privacy-note{font-size:.87rem;color:#9b9b9b;margin-top:.6rem}a:focus,button:focus,input:focus{outline:none;box-shadow:var(--focus)}@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}@media (max-width:720px){.header-content{flex-direction:column;align-items:flex-start;gap:.8rem}.hero-media img{opacity:.12}.price-table{min-width:640px}.form-grid{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
-  <div class="container">
-    <header class="header">
-      <h1>🌤️ Wetter-Dashboard</h1>
-      <p class="subtitle">Aktuelle Bedingungen für Autoaufbereitung</p>
-    </header>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
 
-    <div class="search-section">
-      <input 
-        type="text" 
-        id="searchInput" 
-        class="search-input" 
-        placeholder="Stadt eingeben (z.B. Münsing, Berlin)..."
-        aria-label="Stadt suchen"
-      >
-      <button id="searchBtn" class="search-btn" aria-label="Suchen">Suchen</button>
-      <button id="locationBtn" class="location-btn" aria-label="Aktuellen Standort verwenden" title="Standort verwenden">📍</button>
+  <header class="site-header" role="banner" aria-label="Banner">
+    <div class="hero-inner" style="min-height:160px;">
+      <picture class="hero-media" aria-hidden="true">
+        <source media="(min-width:900px)" srcset="https://images.unsplash.com/photo-1603585684466-183868718238?w=1400&auto=format&fit=crop&q=80 1400w">
+        <img src="https://images.unsplash.com/photo-1603585684466-183868718238?w=900&auto=format&fit=crop&q=80" alt="" loading="lazy" decoding="async">
+      </picture>
+
+      <div class="container header-content">
+        <div class="brand">
+          <div class="logo">MK</div>
+          <h1 class="site-title">Autoaufbereitung &amp; Service</h1>
+          <p class="tagline">Professionelle Fahrzeugpflege — Sauber bis ins Detail</p>
+        </div>
+
+        <div class="header-contacts" role="navigation" aria-label="Kontakt">
+          <a class="btn contact" href="tel:+4915231648866" aria-label="Rufen Sie uns an">📞 01523 1648866</a>
+          <a class="btn contact" href="mailto:Mikaelkawar@gmail.com" aria-label="E‑Mail senden">✉️ Mikaelkawar@gmail.com</a>
+        </div>
+      </div>
     </div>
+  </header>
 
-    <div id="errorMessage" class="error-message" role="alert" aria-live="polite"></div>
-    <div id="loadingSpinner" class="loading-spinner" aria-hidden="true">
-      <div class="spinner"></div>
-      <p>Wetterdaten werden geladen...</p>
+  <main id="main" class="container" role="main">
+    <section aria-labelledby="kontakt-title" class="kontakt">
+      <h2 id="kontakt-title">Kontakt &amp; Informationen</h2>
+      <div class="kontakt-grid">
+        <div class="card">
+          <h3><span class="icon">📞</span> Telefon &amp; WhatsApp</h3>
+          <p><a href="tel:+4915231648866">+49 152 31648866</a> — <a href="https://wa.me/4915231648866" target="_blank" rel="noopener noreferrer">WhatsApp</a></p>
+        </div>
+        <div class="card">
+          <h3><span class="icon">✉️</span> E‑Mail</h3>
+          <p><a href="mailto:Mikaelkawar@gmail.com">Mikaelkawar@gmail.com</a></p>
+        </div>
+        <div class="card">
+          <h3><span class="icon">📍</span> Adresse</h3>
+          <p>Schechen 1<br>82541 Münsing</p>
+        </div>
+        <div class="card">
+          <h3><span class="icon">📷</span> Instagram</h3>
+          <p><a href="https://instagram.com/mk_autoaufbereitung" target="_blank" rel="noopener noreferrer">MK_Autoaufbereitung</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="leistungen-title">
+      <h2 id="leistungen-title">Leistungen</h2>
+      <ul class="leistungen-grid">
+        <li class="service-card">
+          <span class="service-icon">✨</span>
+          <h3>Außenpflege</h3>
+          <p>Politur, Versiegelung, Wachsbehandlung</p>
+        </li>
+        <li class="service-card">
+          <span class="service-icon">🧹</span>
+          <h3>Innenreinigung</h3>
+          <p>Vakuum, Reinigung, Aufbereitung</p>
+        </li>
+        <li class="service-card">
+          <span class="service-icon">🛡️</span>
+          <h3>Schutzbehandlung</h3>
+          <p>Keramik-Coating, Nano-Versiegelung</p>
+        </li>
+        <li class="service-card">
+          <span class="service-icon">🚗</span>
+          <h3>Motorwäsche</h3>
+          <p>Professionelle Reinigung des Motors</p>
+        </li>
+        <li class="service-card">
+          <span class="service-icon">💎</span>
+          <h3>Detailing</h3>
+          <p>Premium-Aufbereitung für Oldtimer</p>
+        </li>
+        <li class="service-card">
+          <span class="service-icon">🧴</span>
+          <h3>Glaspapier & Polieren</h3>
+          <p>Kratzerbeseitigung und Glanzaufbereitung</p>
+        </li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="preise-title">
+      <h2 id="preise-title">Preisliste</h2>
+      
+      <h3 style="margin-top:1.5rem;color:var(--gold-hell);">Außenreinigung & Versiegelung</h3>
+      <div class="table-wrap">
+        <table class="price-table">
+          <thead>
+            <tr>
+              <th>Leistung</th>
+              <th>Fahrzeugklasse</th>
+              <th>Preis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Außenwäsche (Schaum-Wäsche)</td>
+              <td>Klein (z.B. Fiat 500)</td>
+              <td>25,00 €</td>
+            </tr>
+            <tr>
+              <td>Außenwäsche (Schaum-Wäsche)</td>
+              <td>Mittel (z.B. VW Golf)</td>
+              <td>35,00 €</td>
+            </tr>
+            <tr>
+              <td>Außenwäsche (Schaum-Wäsche)</td>
+              <td>Groß (z.B. BMW X5)</td>
+              <td>45,00 €</td>
+            </tr>
+            <tr>
+              <td>Politur & Wachsbehandlung</td>
+              <td>Klein</td>
+              <td>60,00 €</td>
+            </tr>
+            <tr>
+              <td>Politur & Wachsbehandlung</td>
+              <td>Mittel</td>
+              <td>80,00 €</td>
+            </tr>
+            <tr>
+              <td>Politur & Wachsbehandlung</td>
+              <td>Groß</td>
+              <td>120,00 €</td>
+            </tr>
+            <tr>
+              <td>Keramik-Coating (9H)</td>
+              <td>Klein</td>
+              <td>180,00 €</td>
+            </tr>
+            <tr>
+              <td>Keramik-Coating (9H)</td>
+              <td>Mittel</td>
+              <td>250,00 €</td>
+            </tr>
+            <tr>
+              <td>Keramik-Coating (9H)</td>
+              <td>Groß</td>
+              <td>350,00 €</td>
+            </tr>
+            <tr>
+              <td>Nano-Versiegelung</td>
+              <td>Klein</td>
+              <td>90,00 €</td>
+            </tr>
+            <tr>
+              <td>Nano-Versiegelung</td>
+              <td>Mittel</td>
+              <td>130,00 €</td>
+            </tr>
+            <tr>
+              <td>Nano-Versiegelung</td>
+              <td>Groß</td>
+              <td>180,00 €</td>
+            </tr>
+            <tr>
+              <td>Felgenreinigung & Versiegelung</td>
+              <td>Komplettset (4 Felgen)</td>
+              <td>60,00 €</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="margin-top:1.5rem;color:var(--gold-hell);">Innenreinigung & Aufbereitung</h3>
+      <div class="table-wrap">
+        <table class="price-table">
+          <thead>
+            <tr>
+              <th>Leistung</th>
+              <th>Fahrzeugklasse</th>
+              <th>Preis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Innenreinigung (Basis)</td>
+              <td>Klein</td>
+              <td>40,00 €</td>
+            </tr>
+            <tr>
+              <td>Innenreinigung (Basis)</td>
+              <td>Mittel</td>
+              <td>60,00 €</td>
+            </tr>
+            <tr>
+              <td>Innenreinigung (Basis)</td>
+              <td>Groß</td>
+              <td>80,00 €</td>
+            </tr>
+            <tr>
+              <td>Premium Innenreinigung (inkl. Saugen, Reinigung, Aufbereitung)</td>
+              <td>Klein</td>
+              <td>80,00 €</td>
+            </tr>
+            <tr>
+              <td>Premium Innenreinigung (inkl. Saugen, Reinigung, Aufbereitung)</td>
+              <td>Mittel</td>
+              <td>120,00 €</td>
+            </tr>
+            <tr>
+              <td>Premium Innenreinigung (inkl. Saugen, Reinigung, Aufbereitung)</td>
+              <td>Groß</td>
+              <td>160,00 €</td>
+            </tr>
+            <tr>
+              <td>Lederreinigung & Pflege</td>
+              <td>Klein</td>
+              <td>60,00 €</td>
+            </tr>
+            <tr>
+              <td>Lederreinigung & Pflege</td>
+              <td>Mittel</td>
+              <td>90,00 €</td>
+            </tr>
+            <tr>
+              <td>Lederreinigung & Pflege</td>
+              <td>Groß</td>
+              <td>130,00 €</td>
+            </tr>
+            <tr>
+              <td>Sitzbezugreinigung</td>
+              <td>Komplettset</td>
+              <td>50,00 €</td>
+            </tr>
+            <tr>
+              <td>Fensterreinigung (Innen & Außen)</td>
+              <td>Alle Klassen</td>
+              <td>20,00 €</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="margin-top:1.5rem;color:var(--gold-hell);">Spezialleistungen</h3>
+      <div class="table-wrap">
+        <table class="price-table">
+          <thead>
+            <tr>
+              <th>Leistung</th>
+              <th>Fahrzeugklasse</th>
+              <th>Preis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Motorwäsche & Aufbereitung</td>
+              <td>Klein</td>
+              <td>70,00 €</td>
+            </tr>
+            <tr>
+              <td>Motorwäsche & Aufbereitung</td>
+              <td>Mittel</td>
+              <td>100,00 €</td>
+            </tr>
+            <tr>
+              <td>Motorwäsche & Aufbereitung</td>
+              <td>Groß</td>
+              <td>140,00 €</td>
+            </tr>
+            <tr>
+              <td>Kratzerbeseitigung (pro Kratzer)</td>
+              <td>Alle Klassen</td>
+              <td>Ab 30,00 €</td>
+            </tr>
+            <tr>
+              <td>Glaspapier & Polieren (Dachfläche)</td>
+              <td>Alle Klassen</td>
+              <td>40,00 €</td>
+            </tr>
+            <tr>
+              <td>Glaspapier & Polieren (Motorhaube)</td>
+              <td>Alle Klassen</td>
+              <td>50,00 €</td>
+            </tr>
+            <tr>
+              <td>Glaspapier & Polieren (komplettes Auto)</td>
+              <td>Klein</td>
+              <td>200,00 €</td>
+            </tr>
+            <tr>
+              <td>Glaspapier & Polieren (komplettes Auto)</td>
+              <td>Mittel</td>
+              <td>300,00 €</td>
+            </tr>
+            <tr>
+              <td>Glaspapier & Polieren (komplettes Auto)</td>
+              <td>Groß</td>
+              <td>400,00 €</td>
+            </tr>
+            <tr>
+              <td>Oldtimer Detailing (Premium)</td>
+              <td>Klein</td>
+              <td>400,00 €</td>
+            </tr>
+            <tr>
+              <td>Oldtimer Detailing (Premium)</td>
+              <td>Mittel</td>
+              <td>600,00 €</td>
+            </tr>
+            <tr>
+              <td>Oldtimer Detailing (Premium)</td>
+              <td>Groß</td>
+              <td>900,00 €</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="margin-top:1.5rem;color:var(--gold-hell);">Pakete & Angebote</h3>
+      <div class="packages">
+        <div class="package">
+          <h4 class="pack-title">Basis-Paket</h4>
+          <p class="pack-desc">Perfekt für regelmäßige Wartung</p>
+          <dl class="pack-prices">
+            <dt>Außenwäsche</dt>
+            <dd>+ Politur</dd>
+            <dt>Innenreinigung</dt>
+            <dd>ab 80,00 €</dd>
+          </dl>
+        </div>
+
+        <div class="package">
+          <h4 class="pack-title">Premium-Paket</h4>
+          <p class="pack-desc">Rundum-Aufbereitung</p>
+          <dl class="pack-prices">
+            <dt>Außen + Wachs</dt>
+            <dd>+ Nano-Vers.</dd>
+            <dt>Premium Innen</dt>
+            <dd>ab 250,00 €</dd>
+          </dl>
+        </div>
+
+        <div class="package">
+          <h4 class="pack-title">Luxury-Paket</h4>
+          <p class="pack-desc">Komplette Tiefenaufbereitung</p>
+          <dl class="pack-prices">
+            <dt>Keramik-Coating</dt>
+            <dd>+ Motor</dd>
+            <dt>Innen & Leder</dt>
+            <dd>ab 600,00 €</dd>
+          </dl>
+        </div>
+
+        <div class="package">
+          <h4 class="pack-title">Seasonal-Paket</h4>
+          <p class="pack-desc">Saisonale Vorbereitung</p>
+          <dl class="pack-prices">
+            <dt>Außen komplett</dt>
+            <dd>+ Felgen</dd>
+            <dt>Motor + Innen</dt>
+            <dd>ab 180,00 €</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="form-title" class="kontaktformular">
+      <h2 id="form-title">Kontaktformular / Anfrage</h2>
+
+      <form id="contactForm" class="form" method="POST" action="https://formspree.io/f/xyzqwert" novalidate>
+        <input type="text" name="_gotcha" id="hp_gotcha" class="visually-hidden" tabindex="-1" autocomplete="off">
+
+        <div class="form-grid">
+          <label for="name">Name <span aria-hidden="true">*</span></label>
+          <input id="name" name="name" type="text" required aria-required="true" autocomplete="name">
+
+          <label for="email">E‑Mail <span aria-hidden="true">*</span></label>
+          <input id="email" name="email" type="email" required aria-required="true" autocomplete="email">
+
+          <label for="phone">Telefon (optional)</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel">
+
+          <label for="vehicle">Fahrzeugklasse</label>
+          <select id="vehicle" name="vehicle" aria-describedby="vehicle-help">
+            <option value="">— bitte wählen —</option>
+            <option value="klein">Klein (z.B. Fiat 500)</option>
+            <option value="mittel">Mittel (z.B. VW Golf)</option>
+            <option value="gross">Groß (z.B. BMW X5)</option>
+            <option value="sonstiges">Sonstiges</option>
+          </select>
+
+          <label for="service">Gewünschte Leistung</label>
+          <select id="service" name="service">
+            <option value="">— bitte wählen —</option>
+            <option value="aussenwaesche">Außenwäsche</option>
+            <option value="innenreinigung">Innenreinigung</option>
+            <option value="politur">Politur & Wachsbehandlung</option>
+            <option value="keramik">Keramik-Coating</option>
+            <option value="motorwaesche">Motorwäsche</option>
+            <option value="detailing">Detailing</option>
+            <option value="paket">Paket-Angebot</option>
+            <option value="sonstiges">Sonstiges</option>
+          </select>
+
+          <label for="message" style="grid-column:1/-1;">Nachricht (optional)</label>
+          <textarea id="message" name="message" rows="4" style="grid-column:1/-1;"></textarea>
+
+          <div class="consent" style="grid-column:1/-1;">
+            <input type="checkbox" id="privacy" name="privacy" required aria-required="true">
+            <label for="privacy" style="margin:0;">Ich akzeptiere die <a href="#" style="color:var(--gold)">Datenschutzerklärung</a></label>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Anfrage absenden</button>
+          <span class="form-status" id="formStatus"></span>
+        </div>
+
+        <p class="privacy-note">Ihre Daten werden vertraulich behandelt und nur zur Bearbeitung Ihrer Anfrage verwendet.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <h4 class="footer-title">MK Autoaufbereitung &amp; Service</h4>
+      <p class="footer-note">
+        Schechen 1 • 82541 Münsing • Telefon: <a href="tel:+4915231648866" style="color:var(--gold);text-decoration:none">+49 152 31648866</a><br>
+        E‑Mail: <a href="mailto:Mikaelkawar@gmail.com" style="color:var(--gold);text-decoration:none">Mikaelkawar@gmail.com</a>
+      </p>
+      <p style="font-size:0.82rem;color:#777;margin-top:1rem;">© 2024 MK Autoaufbereitung. Alle Rechte vorbehalten.</p>
     </div>
+  </footer>
 
-    <main id="weatherContent" class="weather-content">
-      <!-- Hauptwetter-Karte -->
-      <section class="current-weather" aria-labelledby="current-title">
-        <h2 id="current-title" class="visually-hidden">Aktuelles Wetter</h2>
+  <script>
+    // Formspree Form Handler
+    const form = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const formData = new FormData(form);
+      
+      try {
+        formStatus.textContent = 'Wird gesendet...';
+        formStatus.style.color = 'var(--gold-hell)';
         
-        <div class="weather-header">
-          <div class="location-info">
-            <h3 id="locationName" class="location-name">Münsing, Deutschland</h3>
-            <p id="lastUpdate" class="last-update">Zuletzt aktualisiert: --:--</p>
-          </div>
-          <div class="temperature-display">
-            <div id="temperature" class="temperature">--°C</div>
-            <div id="weatherIcon" class="weather-icon">🌡️</div>
-          </div>
-        </div>
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
 
-        <div class="weather-details-grid">
-          <div class="detail-card">
-            <span class="detail-label">Gefühlte Temp.</span>
-            <span id="feelsLike" class="detail-value">--°C</span>
-          </div>
-          <div class="detail-card">
-            <span class="detail-label">Beschreibung</span>
-            <span id="description" class="detail-value">--</span>
-          </div>
-          <div class="detail-card">
-            <span class="detail-label">Luftfeuchtigkeit</span>
-            <span id="humidity" class="detail-value">--%</span>
-          </div>
-          <div class="detail-card">
-            <span class="detail-label">Luftdruck</span>
-            <span id="pressure" class="detail-value">-- hPa</span>
-          </div>
-          <div class="detail-card">
-            <span class="detail-label">Windgeschwindigkeit</span>
-            <span id="windSpeed" class="detail-value">-- m/s</span>
-          </div>
-          <div class="detail-card">
-            <span class="detail-label">Windrichtung</span>
-            <span id="windDir" class="detail-value">--</span>
-          </div>
-          <div class="detail-card">
-            <span class="detail-label">Bewölkung</span>
-            <span id="clouds" class="detail-value">--%</span>
-          </div>
-          <div class="detail-card">
-            <span class="detail-label">Sichtweite</span>
-            <span id="visibility" class="detail-value">-- km</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- 5-Tage Vorhersage -->
-      <section class="forecast-section" aria-labelledby="forecast-title">
-        <h2 id="forecast-title">5-Tage Vorhersage</h2>
-        <div id="forecastContainer" class="forecast-grid">
-          <!-- Wird dynamisch gefüllt -->
-        </div>
-      </section>
-
-      <!-- Stündliche Vorhersage -->
-      <section class="hourly-section" aria-labelledby="hourly-title">
-        <h2 id="hourly-title">Stündliche Vorhersage (nächste 24h)</h2>
-        <div id="hourlyContainer" class="hourly-grid">
-          <!-- Wird dynamisch gefüllt -->
-        </div>
-      </section>
-
-      <!-- Empfehlungen für Autoaufbereitung -->
-      <section class="recommendations" aria-labelledby="rec-title">
-        <h2 id="rec-title">💡 Empfehlungen für Autoaufbereitung</h2>
-        <div id="recommendationsContainer" class="recommendations-grid">
-          <!-- Wird dynamisch gefüllt -->
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <p>Wetterdaten bereitgestellt von <a href="https://openweathermap.org" target="_blank" rel="noopener noreferrer">OpenWeatherMap</a></p>
-      <p>© 2024 MK Autoaufbereitung & Service</p>
-    </footer>
-  </div>
-
-  <script src="app.js"></script>
+        if (response.ok) {
+          formStatus.textContent = '✓ Anfrage erfolgreich gesendet!';
+          formStatus.style.color = '#4ade80';
+          form.reset();
+          setTimeout(() => {
+            formStatus.textContent = '';
+          }, 5000);
+        } else {
+          formStatus.textContent = '✗ Fehler beim Senden. Bitte versuchen Sie es später erneut.';
+          formStatus.style.color = '#ef4444';
+        }
+      } catch (error) {
+        formStatus.textContent = '✗ Fehler beim Senden. Bitte versuchen Sie es später erneut.';
+        formStatus.style.color = '#ef4444';
+      }
+    });
+  </script>
 </body>
 </html>
