@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wetter-Dashboard | MK Autoaufbereitung</title>
+  <meta name="description" content="Wetter-Dashboard für Autoaufbereitung - Aktuelle Wetterdaten und Vorhersagen für Münsing">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>🌤️ Wetter-Dashboard</h1>
+      <p class="subtitle">Aktuelle Bedingungen für Autoaufbereitung</p>
+    </header>
+
+    <div class="search-section">
+      <input 
+        type="text" 
+        id="searchInput" 
+        class="search-input" 
+        placeholder="Stadt eingeben (z.B. Münsing, Berlin)..."
+        aria-label="Stadt suchen"
+      >
+      <button id="searchBtn" class="search-btn" aria-label="Suchen">Suchen</button>
+      <button id="locationBtn" class="location-btn" aria-label="Aktuellen Standort verwenden" title="Standort verwenden">📍</button>
+    </div>
+
+    <div id="errorMessage" class="error-message" role="alert" aria-live="polite"></div>
+    <div id="loadingSpinner" class="loading-spinner" aria-hidden="true">
+      <div class="spinner"></div>
+      <p>Wetterdaten werden geladen...</p>
+    </div>
+
+    <main id="weatherContent" class="weather-content">
+      <!-- Hauptwetter-Karte -->
+      <section class="current-weather" aria-labelledby="current-title">
+        <h2 id="current-title" class="visually-hidden">Aktuelles Wetter</h2>
+        
+        <div class="weather-header">
+          <div class="location-info">
+            <h3 id="locationName" class="location-name">Münsing, Deutschland</h3>
+            <p id="lastUpdate" class="last-update">Zuletzt aktualisiert: --:--</p>
+          </div>
+          <div class="temperature-display">
+            <div id="temperature" class="temperature">--°C</div>
+            <div id="weatherIcon" class="weather-icon">🌡️</div>
+          </div>
+        </div>
+
+        <div class="weather-details-grid">
+          <div class="detail-card">
+            <span class="detail-label">Gefühlte Temp.</span>
+            <span id="feelsLike" class="detail-value">--°C</span>
+          </div>
+          <div class="detail-card">
+            <span class="detail-label">Beschreibung</span>
+            <span id="description" class="detail-value">--</span>
+          </div>
+          <div class="detail-card">
+            <span class="detail-label">Luftfeuchtigkeit</span>
+            <span id="humidity" class="detail-value">--%</span>
+          </div>
+          <div class="detail-card">
+            <span class="detail-label">Luftdruck</span>
+            <span id="pressure" class="detail-value">-- hPa</span>
+          </div>
+          <div class="detail-card">
+            <span class="detail-label">Windgeschwindigkeit</span>
+            <span id="windSpeed" class="detail-value">-- m/s</span>
+          </div>
+          <div class="detail-card">
+            <span class="detail-label">Windrichtung</span>
+            <span id="windDir" class="detail-value">--</span>
+          </div>
+          <div class="detail-card">
+            <span class="detail-label">Bewölkung</span>
+            <span id="clouds" class="detail-value">--%</span>
+          </div>
+          <div class="detail-card">
+            <span class="detail-label">Sichtweite</span>
+            <span id="visibility" class="detail-value">-- km</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5-Tage Vorhersage -->
+      <section class="forecast-section" aria-labelledby="forecast-title">
+        <h2 id="forecast-title">5-Tage Vorhersage</h2>
+        <div id="forecastContainer" class="forecast-grid">
+          <!-- Wird dynamisch gefüllt -->
+        </div>
+      </section>
+
+      <!-- Stündliche Vorhersage -->
+      <section class="hourly-section" aria-labelledby="hourly-title">
+        <h2 id="hourly-title">Stündliche Vorhersage (nächste 24h)</h2>
+        <div id="hourlyContainer" class="hourly-grid">
+          <!-- Wird dynamisch gefüllt -->
+        </div>
+      </section>
+
+      <!-- Empfehlungen für Autoaufbereitung -->
+      <section class="recommendations" aria-labelledby="rec-title">
+        <h2 id="rec-title">💡 Empfehlungen für Autoaufbereitung</h2>
+        <div id="recommendationsContainer" class="recommendations-grid">
+          <!-- Wird dynamisch gefüllt -->
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Wetterdaten bereitgestellt von <a href="https://openweathermap.org" target="_blank" rel="noopener noreferrer">OpenWeatherMap</a></p>
+      <p>© 2024 MK Autoaufbereitung & Service</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
